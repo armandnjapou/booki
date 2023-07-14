@@ -1,0 +1,21 @@
+$primary-color: red;
+$sections: "presentation", "production", "contact";
+
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    @include flex-center();
+    padding: 2em;
+}
+
+@for $i from 1 to 3 {
+    #section-#{$i} {
+        background-image: url('img/bg-' + $i + '.png');
+    }
+}
+
